@@ -6,8 +6,6 @@ if [ "$(id -u)" != "0" ]; then
 fi
 USER=`grep 1000 /etc/passwd | cut -f1 -d:`
 
-INTELLIJ_VERSION='ideaIU-2016.2.1'
-
 PCK1='php perl git'
 PCK2='remmina vlc apache2'
 PCK3='ruby1.9.3 curl'
@@ -35,10 +33,10 @@ apt-get install sublime-text -y
 
 mkdir /opt/software
 
-mkdir /home/$USER/public_html/
-ln -s /usr/share/phpmyadmin /home/$USER/public_html/
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
+#mkdir /home/$USER/public_html/
+#ln -s /usr/share/phpmyadmin /home/$USER/public_html/
+#curl -sS https://getcomposer.org/installer | php
+#sudo mv composer.phar /usr/local/bin/composer
 
 cd /tmp
 wget http://apache.spinellicreations.com/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz
