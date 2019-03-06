@@ -15,7 +15,7 @@
   shell: "{{user_home}}/install.sh"
   become: "{{user}}"
 
-- name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
+- name: Configure user
   user:
     name: "{{user}}"
     shell: /bin/zsh
