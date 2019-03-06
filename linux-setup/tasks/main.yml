@@ -4,8 +4,11 @@
     name: zsh
     state: present
 
-- name: Task
-  shell: wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+- name: Download install.sh
+  get_url:
+    url: https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
+    dest: ~
+    mode: 0700
 
 - name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
   user:
