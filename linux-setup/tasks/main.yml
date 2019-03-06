@@ -1,5 +1,5 @@
 ---
-- name: Add Nexus User
-  user:
-    name: kubeuser
+- name: Install zsh
+  package:
+    name: zsh
     state: present
