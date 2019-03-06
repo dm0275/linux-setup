@@ -18,7 +18,7 @@ fi
  fi
 
 PACKAGES=(ansible curl git)
-$PKG_MGR install -y ${PACKAGES[*]}
+$PKG_MGR update && $PKG_MGR install -y ${PACKAGES[*]}
 
 git clone https://github.com/dm0275/linux-setup-ansible.git
 ansible-playbook init.yml
