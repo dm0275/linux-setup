@@ -13,6 +13,8 @@
 
 - name: Run oh-my-zsh installer
   shell: "{{user_home}}/install.sh"
+  args:
+    creates: "{{user_home}}/.zshrc"
   become: "{{user}}"
 
 - name: Configure user
