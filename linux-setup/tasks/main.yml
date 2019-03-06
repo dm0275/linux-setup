@@ -4,6 +4,9 @@
     name: zsh
     state: present
 
+- name: Task
+  shell: wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
 - name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
   user:
     name: "{{user}}"
