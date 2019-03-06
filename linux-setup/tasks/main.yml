@@ -6,7 +6,7 @@
 
 - name: Download oh-my-zsh installer
   get_url:
-    url: https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
+    url: "{{zsh_url}}"
     dest: "{{user_home}}"
     owner: "{{user}}"
     mode: 0700
