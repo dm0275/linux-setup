@@ -4,11 +4,16 @@
     name: zsh
     state: present
 
-- name: Download install.sh
+- name: Download oh-my-zsh installer
   get_url:
     url: https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
-    dest: ~
+    dest: "{{user_home}}"
+    owner: "{{user}}"
     mode: 0700
+
+- name: Run oh-my-zsh installer
+  shell: "{{user_home}}/install.sh"
+  become: "{{user}}"
 
 - name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
   user:

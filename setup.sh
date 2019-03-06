@@ -21,3 +21,4 @@ PACKAGES=(ansible curl git)
 
 $PKG_MGR install -y ${PACKAGES[*]}
 
+ansible-playbook init.yml
