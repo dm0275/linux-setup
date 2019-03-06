@@ -1,6 +1,0 @@
----
-# defaults file for linux-setup
-user: vagrant
-user_home: /home/vagrant
-
-zsh_url: https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
