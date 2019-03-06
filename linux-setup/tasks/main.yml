@@ -1,11 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
-  become: true
-  gather_facts: true
-
-  tasks:
-  - name: Add Nexus User
-    user:
-      name: kubeuser
-      state: present
+- name: Add Nexus User
+  user:
+    name: kubeuser
+    state: present
